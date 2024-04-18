@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essen</title>
+    <style>
+      body {
+        background: linear-gradient(
+          175deg,
+          rgb(241, 192, 123),
+          white,
+          rgb(241, 192, 123)
+        );
+      }
+      nav {
+        position: sticky;
+        top: 0%;
+        height: 72px;
+        background-color: white;
+        /* background: linear-gradient(45deg,orange, white, orange) ; */
+        border: 1px solid lightgray;
+        border-radius: 7px;
+        box-shadow: lightgray 3px 3px 3px;
+      }
+      #nav1 {
+        margin: 5px;
+        width: 80px;
+        height: 60px;
+        border-radius: 7px;
+      }
+      .content {
+        padding: 0;
+        border-radius: 10px;
+        height: 500px;
+        width: 1000px;
+        overflow: hidden;
+        box-shadow: 20px hsl(0, 0%, 3%);
+        z-index: -1;
+        margin-left: 18%;
+      }
+      .show {
+        padding: 10%;
+        width: fit-content;
+      }
+
+      .slide_content {
+        float: left;
+        width: 1000px;
+        height: 500px;
+      }
+      .slides {
+        width: 4000px;
+        animation-name: slide;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+      }
+      .i1 {
+        height: 500px;
+        width: 1000px;
+      }
+      @keyframes slide {
+        20% {
+          margin-left: 0px;
+        }
+        40% {
+          margin-left: calc(-1000px * 1);
+        }
+        60% {
+          margin-left: calc(-1000px * 2);
+        }
+        80% {
+          margin-left: calc(-1000px * 3);
+        }
+      }
+      .lunch {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .c1 {
+        width: 200px;
+        height: 150px;
+        border-radius: 7px;
+      }
+      form {
+        position: absolute;
+        left: 74%;
+        top: 27%;
+      }
+      .bt1 {
+        width: 60px;
+        height: 40px;
+        position: absolute;
+        top: 16px;
+        left: 95%;
+        border-radius: 7px;
+        background: linear-gradient(200deg, orange, white, orange);
+        border: 1px solid black;
+      }
+      .d1{
+        padding: 40px;
+        transition: transform .1s;
+      }
+      .d1:hover{
+        transform: scale(1.3);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <img id="nav1" src="./images/essen-high-resolution-logo.png" alt="essen" />
+      <form class="form-inline my-2 my-lg-0">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+        />
+        <button
+          class="btn my-2 my-sm-0"
+          type="submit"
+          style="color: black; border: 1px solid black"
+        >
+          Search
+        </button>
+      </form>
+      <a href="./signin.html"><button class="bt1">Sign</button></a>
+    </nav>
+    <br />
+    <div class="lunch">
+      
+      <div class="d1">
+        <a href="./biryani.html"> <img class="c1" src="./images/biryani.jpg" alt="biryani" /></a><br >
+        <center><p>Biryani's</p></center>
+      </div>
+  
+      <div class="d1">
+        <a href="./pizza.html"><img class="c1" src="./images/pizza1.jpeg" alt="Pizza's" /></a><br >
+        <center><p>Pizza's</p></center>
+      </div>
+      <div class="d1">
+        <a href="./burger.html"><img class="c1" src="./images/burger.jpeg" alt="Burger's" /></a><br >
+        <center><p>Burger's</p></center>
+      </div>
+      <div class="d1">
+        <a href="./wraps.html"><img class="c1" src="./images/rolls.jpeg" alt="Rolls" /></a><br>
+        <center><p>Wraps</p></center>
+      </div>
+    </div>
+    <br>
+    <div class="content">
+      <div class="slides">
+        <div class="slide_content 1">
+          <img class="i1" src="./images/slide 1.jpg" alt="pizzas" />
+        </div>
+        <div class="slide_content 2">
+          <img class="i1" src="./images/slide 2.jpg" alt="burger" />
+        </div>
+        <div class="slide_content 3">
+          <img class="i1" src="./images/slide 3.png" alt="chicken" />
+        </div>
+        <div class="slide_content 4">
+          <img class="i1" src="./images/slide 4.jpg" alt="biryani" />
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="lunch">
+      <div class="d1">
+        <a href="./sandwich.html"> <img class="c1" src="./images/sandwich.jpeg" alt="Sandwich" /></a><br >
+        <center><p>Sandwich</p></center>
+      </div>
+  
+      <div class="d1">
+        <a href="./cakes.html"><img class="c1" src="./images/cake.jpg" alt="Cakes" /></a><br >
+        <center><p>Cakes</p></center>
+      </div>
+      <div class="d1">
+        <a href="./Juices.html"><img class="c1" src="./images/juice.jpg" alt="Juices" /></a><br >
+        <center><p>Juices</p></center>
+      </div>
+      <div class="d1">
+        <a href="./icecream.html"><img class="c1" src="./images/flavoured icecream.jpeg" alt="Flavoured Icecreams" /></a><br>
+        <center><p>Flavoured Icecreams</p></center>
+      </div>
+    </div>
+    <br>
+<div >
+  <footer class="text-center text-lg-start" style="background-color: #f99e70;">
+    <div class="container d-flex justify-content-center py-3">
+      <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b; border-radius: 50%;;">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+      <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b; border-radius: 50%;;">
+        <i class="fab fa-youtube"></i>
+      </button>
+      <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b; border-radius: 50%;;">
+        <i class="fab fa-instagram"></i>
+      </button>
+      <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b; border-radius: 50%;;">
+        <i class="fab fa-twitter"></i>
+      </button>
+    </div>
+    <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 Copyright:
+      <a class="text-white" href="./index.html">ESSEN</a> <br>     
+    </div>
+  </footer>
+</div>
+  </body>
+</html>
